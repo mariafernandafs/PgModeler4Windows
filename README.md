@@ -24,7 +24,7 @@ suas dependências incluindo o Qt framework e PostgreSQL
 	
 * Primeiro, instale o MSYS2 (64-bit ou 32-bit conforme versão da arquitetura do computador), e clique no programa no menu iniciar.
 
-Dentro do programa (na linha de comando), digite os comandos abaixo na ordem correta:
+No console do programa MSYS2 MinGW, digite os comandos abaixo na ordem correta:
 #
 	1: pacman -Suy
  	2: pacman -Suy
@@ -57,6 +57,7 @@ Passe esta opção duas vezes para habilitar downgrades de pacote; neste caso, o
 Atualize os valores conforme a localização dos arquivos nos diretórios em seu sistema. Salve o arquivo (pgmodeler.pri.) e proceda com o próximo passo. 
  
 PARTE 2 - COMPILANDO O SOFTWARE
+
 Todos os comandos abaixo devem ser executados no console do programa MSYS2 MinGW com privilégios root 
 e a partir do diretório onde o código fonte do PgModeler se encontra (descompactado).
 
