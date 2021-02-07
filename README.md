@@ -65,6 +65,7 @@ e a partir do diretório onde o código fonte do PgModeler se encontra (descompa
 e do diretório onde o PgModeler deverá ser instalado (recomanda-se a criação um diretório em branco com 
 o nome PgModeler) respectivamente
 #
+	mkdir -p /C/PgModeler
 	export QT_ROOT=/C/Qt
 	export INSTALLATION_ROOT=/C/PgModeler
 		
@@ -84,6 +85,7 @@ geração de diretivas (Makefiles). Primeiro passo o qmake gera um arquivo de pr
 * make - utilitário GNU make para montar grupos de programas - gera o arquivo compilado.
 Ao iniciar o comando make sem a especificação de um arquivo (opção -f), o utilitário 
 faz a seguinte sequência de busca no diretório atual:
+
 	    1 - GNUmakefile
 	    2 - makefile
 	    3 - Makefile
