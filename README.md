@@ -37,7 +37,7 @@ Entendendo os Parâmentros do comando do item 4:
 #
 	-Suy -> combinação dos parâmentros -S, -u e -y
 	-S ou --sync -> Sincroniza pacotes. Os pacotes são instalados diretamente dos repositórios remotos, incluindo todas as dependências necessárias para executar os pacotes.No exemplo abaixo, irá baixar e instalar o qt e todos os pacotes dos quais ele depende:
-	pacman -S qt 
+		$ pacman -S qt 
 	-u ou --sysupgrade -> Atualiza todos os pacotes desatualizados.
 	-y ou --refresh -> Baixe uma nova cópia do banco de dados do pacote mestre do (s) servidor (es) definido (s) em pacman.conf (todo gerenciador de pacotes possui um banco de dados que contém suas fontes de busca).
 
