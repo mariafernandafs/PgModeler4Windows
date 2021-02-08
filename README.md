@@ -32,7 +32,7 @@ suas dependências incluindo o Qt framework e PostgreSQL (pode ser utilizada a v
   	$ pacman -S base-devel mingw-w64-x86_64-make mingw-w64-x86_64-gcc mingw-w64-x86_64-postgresql mingw-w64-x86_64-qt5
 ```
 
-	* O "pacman" é um gerenciador de pacotes cria inicalmente para o Arch Linux e tem como objetivo tornar possível o fácil gerenciamento de pacotes tanto dos repositórios oficiais quanto do Arch User Repository (AUR) repositório comunitário e não oficial. Possui uma importante capacidade de `sincronização` da máquina local com a máquina remoto. 
+	O `pacman` é um gerenciador de pacotes cria inicalmente para o Arch Linux e tem como objetivo tornar possível o fácil gerenciamento de pacotes tanto dos repositórios oficiais quanto do Arch User Repository (AUR) repositório comunitário e não oficial. Possui uma importante capacidade de `sincronização` da máquina local com a máquina remoto. 
 Obs.: Os pacotes do Pacman são em formato tar compactado.
 
 	Entendendo os Parâmentros do comando `pacman` do item 4:
@@ -48,15 +48,15 @@ Obs.: Os pacotes do Pacman são em formato tar compactado.
 
 5) É necessário corrigir o valor das variáveis de ambiente "PGSQL_LIB, PGSQL_INC, XML_INC and XML_LIB" para que o compilador possa encontrar o cabeçalho e bibliotecas para libxml2 e libpq. Abra o arquivo "pgmodeler.pri" que se encontra junto com o código fonte em um editor e procure o seguinte trecho:  
 
-```
-	windows {
-		!defined(PGSQL_LIB, var): PGSQL_LIB = C:/msys64/mingw64/bin/libpq.dll
-		!defined(PGSQL_INC, var): PGSQL_INC = C:/msys64/mingw64/include
-		!defined(XML_INC, var): XML_INC = C:/msys64/mingw64/include/libxml2
-		!defined(XML_LIB, var): XML_LIB = C:/msys64/mingw64/bin/libxml2-2.dll
-		...
-	}
-```
+	```
+		windows {
+			!defined(PGSQL_LIB, var): PGSQL_LIB = C:/msys64/mingw64/bin/libpq.dll
+			!defined(PGSQL_INC, var): PGSQL_INC = C:/msys64/mingw64/include
+			!defined(XML_INC, var): XML_INC = C:/msys64/mingw64/include/libxml2
+			!defined(XML_LIB, var): XML_LIB = C:/msys64/mingw64/bin/libxml2-2.dll
+			...
+		}
+	```
 
 	Atualize os valores conforme a localização dos arquivos nos diretórios em seu sistema. Salve o arquivo (pgmodeler.pri.) e proceda com o próximo passo. 
  
@@ -70,28 +70,29 @@ e a partir do diretório onde o código fonte do PgModeler se encontra (descompa
 7) exportar as variáveis "QT_ROOT" e "INSTALLATION_ROOT" com os caminhos completos da instalação do Qt 
 e do diretório onde o PgModeler deverá ser instalado (recomanda-se a criação um diretório em branco com 
 o nome PgModeler) respectivamente
-```console
-	$ mkdir -p /C/PgModeler
-	$ export QT_ROOT=/C/Qt
-	$ export INSTALLATION_ROOT=/C/PgModeler
-```
+	```console
+		$ mkdir -p /C/PgModeler
+		$ export QT_ROOT=/C/Qt
+		$ export INSTALLATION_ROOT=/C/PgModeler
+	```
 
 8) Na sequência, rode os seguintes comandos:
-```console
-	$ qmake -r CONFIG+=release PREFIX=$INSTALLATION_ROOT pgmodeler.pro
-	$ make
-	$ make install
-	$ cd $INSTALLATION_ROOT
- 	$ windeployqt pgmodeler.exe pgmodeler_ui.dll
-```
+	```console
+		$ qmake -r CONFIG+=release PREFIX=$INSTALLATION_ROOT pgmodeler.pro
+		$ make
+		$ make install
+		$ cd $INSTALLATION_ROOT
+		$ windeployqt pgmodeler.exe pgmodeler_ui.dll
+	```
 
-* qmake - (make do qt) é uma ferramenta de "build system", ou seja, auxilia na automatização de scripts 
+	* qmake - (make do qt) é uma ferramenta de "build system", ou seja, auxilia na automatização de scripts 
 para compilar o código fonte. Normalmente é usado em projetos que utilizam o framework Qt, porém pode 
 ser usado em qualquer código C e C++;  contém várias funcionalidades que automatizam o processo de 
 geração de diretivas (Makefiles). Primeiro passo o qmake gera um arquivo de projeto (.pro) inicial. 
 
-* make - utilitário GNU make para montar grupos de programas - gera o arquivo compilado.
-Ao iniciar o comando make sem a especificação de um arquivo (opção -f), o utilitário 
+	* make - utilitário GNU make para montar grupos de programas - gera o arquivo compilado.
+	
+	Ao iniciar o comando make sem a especificação de um arquivo (opção -f), o utilitário 
 faz a seguinte sequência de busca no diretório atual:
 
 	    1 - GNUmakefile
@@ -99,13 +100,11 @@ faz a seguinte sequência de busca no diretório atual:
 	    3 - Makefile
 
 
-Apenas o primeiro arquivo encontrado é executado pelo utilitário.
+	Apenas o primeiro arquivo encontrado é executado pelo utilitário.
 
-* make install - instala o  programa já compilado.
+	* make install - instala o  programa já compilado.
 
-* windeployqt (Windows deployment tool) - A ferramenta de implantação do Windows windeployqt 
-foi projetada para automatizar o processo de criação de uma pasta implantável contendo as dependências 
-relacionadas ao Qt (bibliotecas, importações QML, plug-ins e traduções) necessárias para executar o aplicativo a partir dessa pasta. 
+	* windeployqt (Windows deployment tool) - A ferramenta de implantação do Windows windeployqt foi projetada para automatizar o processo de criação de uma pasta implantável contendo as dependências relacionadas ao Qt (bibliotecas, importações QML, plug-ins e traduções) necessárias para executar o aplicativo a partir dessa pasta. 
 
 * * * *
 
@@ -118,29 +117,29 @@ fazer com que os binários sejam localizados corretamente.
 para os caminhos atualizados (PGSQL_ROOT - caminho completo para a pasta de instalação do PostgreSQL,
 PGMODELER_SOURCE - caminho completo para o diretório de código-fonte do pgModeler e MSYS2_ROOT - caminho 
 completo para a instalação do MSYS2)
-```console
-	$ export PGSQL_ROOT=/C/"Program Files"/PostgreSQL/13/bin
-	$ export PGMODELER_SOURCE=/C/Users/User/Downloads/pgmodeler-0.9.3/pgmodeler-0.9.3.tar/pgmodeler-0.9.3
-	$ export MSYS2_ROOT=/C/Qt/6.0.1
-```		
+	```console
+		$ export PGSQL_ROOT=/C/"Program Files"/PostgreSQL/13/bin
+		$ export PGMODELER_SOURCE=/C/Users/User/Downloads/pgmodeler-0.9.3/pgmodeler-0.9.3.tar/pgmodeler-0.9.3
+		$ export MSYS2_ROOT=/C/Qt/6.0.1
+	```		
 
 10) Por fim, rode os comandos abaixo para copiar as bibliotecas do mingw para a pasta onde ficará o PgModeler:
-```console
-	$ cd $MSYS2_ROOT/mingw64/bin/
-	$ export INSTALLATION_ROOT=/C/PgModeler
-	$ cp libicuin*.dll libicuuc*.dll libicudt*.dll libpcre2-16-0.dll libharfbuzz-0.dll \
-		  libpng16-16.dll libfreetype-6.dll libgraphite2.dll libglib-2.0-0.dll libpcre-1.dll \
-		  libbz2-1.dll libssl-1_1-x64.dll libcrypto-1_1-x64.dll libgcc_s_seh-1.dll \
-		  libstdc++-6.dll libwinpthread-1.dll zlib1.dll libpq.dll libxml2-2.dll liblzma-5.dll \
-		  libiconv-2.dll libintl-8.dll libbrotlidec.dll libbrotlicommon.dll libdouble-conversation.dll \
-		  libzstd.dll $INSTALLATION_ROOT	
-```
+	```console
+		$ cd $MSYS2_ROOT/mingw64/bin/
+		$ export INSTALLATION_ROOT=/C/PgModeler
+		$ cp libicuin*.dll libicuuc*.dll libicudt*.dll libpcre2-16-0.dll libharfbuzz-0.dll \
+			  libpng16-16.dll libfreetype-6.dll libgraphite2.dll libglib-2.0-0.dll libpcre-1.dll \
+			  libbz2-1.dll libssl-1_1-x64.dll libcrypto-1_1-x64.dll libgcc_s_seh-1.dll \
+			  libstdc++-6.dll libwinpthread-1.dll zlib1.dll libpq.dll libxml2-2.dll liblzma-5.dll \
+			  libiconv-2.dll libintl-8.dll libbrotlidec.dll libbrotlicommon.dll libdouble-conversation.dll \
+			  libzstd.dll $INSTALLATION_ROOT	
+	```
 
 * * * *
 
 ## 4. EXECUTANDO O PGMODELER
-Finalmente o PgModeler pode ser iniciado.
-Abra a pasta de instalação `C:\PgModeler` e dê um dublo clique na aplicação "pgmodeler.exe" e divirta-se.
+	Finalmente o PgModeler pode ser iniciado.
+	Abra a pasta de instalação `C:\PgModeler` e dê um dublo clique na aplicação "pgmodeler.exe" e divirta-se.
 
 Enjoy!
 
