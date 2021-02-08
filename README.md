@@ -8,7 +8,7 @@ PgModeler é um Software para modelagem de dados que utiliza o Banco de Dados Po
 PARTE 1 - PREPARANDO AMBIENTE
 1) Em todas as plataformas, o primeiro requisito será o Qt framework. 
 A modalidade recomentada é a The LTS (Long Term Support) mas qualquer versão estável 
-pode ser usada, certifique-se de que não seja uma versão abaixo da 5.9.9 (A versão utilizada neste guia foi x).
+pode ser usada, certifique-se de que não seja uma versão abaixo da 5.9.9 (A versão utilizada neste guia foi 5.15).
 	* https://www.qt.io/download
 	
 2) Depois, será necessário a instalação do PostgreSQL (A versão utilizada neste guia foi a 13).
@@ -25,12 +25,12 @@ suas dependências incluindo o Qt framework e PostgreSQL (pode ser utilizada a v
 * Primeiro, instale o MSYS2 (64-bit ou 32-bit conforme versão da arquitetura do computador), e clique no programa no menu iniciar.
 
 No console do programa MSYS2 MinGW, digite os comandos abaixo na ordem correta:
-```shell
+```bash
 	1: pacman -Suy
  	2: pacman -Suy
   	3: pacman -S base-devel mingw-w64-x86_64-make mingw-w64-x86_64-gcc mingw-w64-x86_64-postgresql mingw-w64-x86_64-qt5
 ```
-* O "pacman" é um gerenciador de pacotes cria inicalmente para o Arch Linux e tem como objetivo tornar possível o fácil gerenciamento de pacotes tanto dos repositórios oficiais quanto do Arch User Repository (AUR) repositório comunitário e não oficial. Possui uma importante capacidade de SINCRONIZAÇÃO da máquina local com a máquina remoto. 
+* O "pacman" é um gerenciador de pacotes cria inicalmente para o Arch Linux e tem como objetivo tornar possível o fácil gerenciamento de pacotes tanto dos repositórios oficiais quanto do Arch User Repository (AUR) repositório comunitário e não oficial. Possui uma importante capacidade de `sincronização` da máquina local com a máquina remoto. 
 Obs.: Os pacotes do Pacman são em formato tar compactado.
 
 Entendendo os Parâmentros do comando do item 4:
