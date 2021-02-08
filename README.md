@@ -48,7 +48,7 @@ suas dependências incluindo o Qt framework e PostgreSQL (pode ser utilizada a v
 
 5) É necessário corrigir o valor das variáveis de ambiente "PGSQL_LIB, PGSQL_INC, XML_INC and XML_LIB" para que o compilador possa encontrar o cabeçalho e bibliotecas para libxml2 e libpq. Abra o arquivo "pgmodeler.pri" que se encontra junto com o código fonte em um editor e procure o seguinte trecho:  
 
-```
+```console
 windows {
 	!defined(PGSQL_LIB, var): PGSQL_LIB = C:/msys64/mingw64/bin/libpq.dll
 	!defined(PGSQL_INC, var): PGSQL_INC = C:/msys64/mingw64/include
@@ -58,7 +58,7 @@ windows {
 }
 ```
 
-	Atualize os valores conforme a localização dos arquivos nos diretórios em seu sistema. Salve o arquivo (pgmodeler.pri.) e proceda com o próximo passo. 
+Atualize os valores conforme a localização dos arquivos nos diretórios em seu sistema. Salve o arquivo (pgmodeler.pri.) e proceda com o próximo passo. 
  
 * * * * 
 
