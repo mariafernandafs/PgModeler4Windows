@@ -36,7 +36,7 @@ No console do programa MSYS2 MinGW, digite os comandos abaixo na ordem correta:
 * O "pacman" é um gerenciador de pacotes cria inicalmente para o Arch Linux e tem como objetivo tornar possível o fácil gerenciamento de pacotes tanto dos repositórios oficiais quanto do Arch User Repository (AUR) repositório comunitário e não oficial. Possui uma importante capacidade de `sincronização` da máquina local com a máquina remoto. 
 Obs.: Os pacotes do Pacman são em formato tar compactado.
 
-Entendendo os Parâmentros do comando do item 4:
+Entendendo os Parâmentros do comando `pacman` do item 4:
 ```console
 	-Suy -> combinação dos parâmentros -S, -u e -y
 	-S ou --sync -> Sincroniza pacotes. Os pacotes são instalados diretamente dos repositórios remotos, incluindo todas as dependências necessárias para executar os pacotes.No exemplo abaixo, irá baixar e instalar o qt e todos os pacotes dos quais ele depende:
@@ -93,10 +93,11 @@ geração de diretivas (Makefiles). Primeiro passo o qmake gera um arquivo de pr
 * make - utilitário GNU make para montar grupos de programas - gera o arquivo compilado.
 Ao iniciar o comando make sem a especificação de um arquivo (opção -f), o utilitário 
 faz a seguinte sequência de busca no diretório atual:
-
+```
 	    1 - GNUmakefile
 	    2 - makefile
 	    3 - Makefile
+```	    
 Apenas o primeiro arquivo encontrado é executado pelo utilitário.
 
 * make install - instala o  programa já compilado.
