@@ -24,7 +24,7 @@ suas dependências incluindo o Qt framework e PostgreSQL (pode ser utilizada a v
 	
 	* Primeiro, instale o MSYS2 (64-bit ou 32-bit conforme versão da arquitetura do computador), e clique no programa no menu iniciar.
 
-No console do programa MSYS2 MinGW, digite os comandos abaixo na ordem correta:
+	No console do programa MSYS2 MinGW, digite os comandos abaixo na ordem correta:
 
 ```console
 	$ pacman -Suy
@@ -36,13 +36,13 @@ No console do programa MSYS2 MinGW, digite os comandos abaixo na ordem correta:
 Obs.: Os pacotes do Pacman são em formato tar compactado.
 
 	Entendendo os Parâmentros do comando `pacman` do item 4:
-```console
-	-Suy -> combinação dos parâmentros -S, -u e -y
-	-S ou --sync -> Sincroniza pacotes. Os pacotes são instalados diretamente dos repositórios remotos, incluindo todas as dependências necessárias para executar os pacotes.No exemplo abaixo, irá baixar e instalar o qt e todos os pacotes dos quais ele depende:
-		$ pacman -S qt 
-	-u ou --sysupgrade -> Atualiza todos os pacotes desatualizados.
-	-y ou --refresh -> Baixe uma nova cópia do banco de dados do pacote mestre do (s) servidor (es) definido (s) em pacman.conf (todo gerenciador de pacotes possui um banco de dados que contém suas fontes de busca).
-```
+	```console
+		-Suy -> combinação dos parâmentros -S, -u e -y
+		-S ou --sync -> Sincroniza pacotes. Os pacotes são instalados diretamente dos repositórios remotos, incluindo todas as dependências necessárias para executar os pacotes.No exemplo abaixo, irá baixar e instalar o qt e todos os pacotes dos quais ele depende:
+			$ pacman -S qt 
+		-u ou --sysupgrade -> Atualiza todos os pacotes desatualizados.
+		-y ou --refresh -> Baixe uma nova cópia do banco de dados do pacote mestre do (s) servidor (es) definido (s) em pacman.conf (todo gerenciador de pacotes possui um banco de dados que contém suas fontes de busca).
+	```
 
 	Passe esta opção duas vezes para habilitar downgrades de pacote; neste caso, o pacman selecionará os pacotes de sincronização cujas versões não correspondem às versões locais. Isso pode ser útil quando o usuário muda de um repositório de teste para um estável.
 
@@ -58,7 +58,7 @@ Obs.: Os pacotes do Pacman são em formato tar compactado.
 	}
 ```
 
-Atualize os valores conforme a localização dos arquivos nos diretórios em seu sistema. Salve o arquivo (pgmodeler.pri.) e proceda com o próximo passo. 
+	Atualize os valores conforme a localização dos arquivos nos diretórios em seu sistema. Salve o arquivo (pgmodeler.pri.) e proceda com o próximo passo. 
  
 * * * * 
 
