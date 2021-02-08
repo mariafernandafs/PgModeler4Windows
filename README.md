@@ -6,7 +6,7 @@ Procedimento de Compilação e Instalação do software de modelagem PgModeler e
 
 PgModeler é um Software para modelagem de dados que utiliza o Banco de Dados PostgreSQL (RDBMS). É muito útil para importar e exportar dados em diversos formatos e para ter um desgin do schema utilizado com uma visão ampla dos relacionamentos. 
 
-1. PREPARANDO AMBIENTE
+## 1. PREPARANDO AMBIENTE
 1) Em todas as plataformas, o primeiro requisito será o Qt framework. 
 A modalidade recomentada é a The LTS (Long Term Support) mas qualquer versão estável 
 pode ser usada, certifique-se de que não seja uma versão abaixo da 5.9.9 (A versão utilizada neste guia foi 5.15).
@@ -62,7 +62,7 @@ Atualize os valores conforme a localização dos arquivos nos diretórios em seu
  
 * * * * 
 
-2. COMPILANDO O SOFTWARE
+## 2. COMPILANDO O SOFTWARE
 
 Todos os comandos abaixo devem ser executados no console do programa MSYS2 MinGW com privilégios root 
 e a partir do diretório onde o código fonte do PgModeler se encontra (descompactado).
@@ -109,7 +109,7 @@ relacionadas ao Qt (bibliotecas, importações QML, plug-ins e traduções) nece
 
 * * * *
 
-3. RESOLVENDO DEPENDÊNCIAS
+## 3. RESOLVENDO DEPENDÊNCIAS
 Depois do sucesso da compilação do código fonte e instalação dos binários, é necessário copiar
 algumas dependências para a pasta de instalação do PgModeler e rodar alguns comandos para
 fazer com que os binários sejam localizados corretamente.
