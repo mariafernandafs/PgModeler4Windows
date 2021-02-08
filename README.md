@@ -78,29 +78,26 @@ $ export INSTALLATION_ROOT=/C/PgModeler
 ```
 
 8) Na sequência, rode os seguintes comandos:
-```console
-$ qmake -r CONFIG+=release PREFIX=$INSTALLATION_ROOT pgmodeler.pro
-$ make
-$ make install
-$ cd $INSTALLATION_ROOT
-$ windeployqt pgmodeler.exe pgmodeler_ui.dll
-```
+	```console
+	$ qmake -r CONFIG+=release PREFIX=$INSTALLATION_ROOT pgmodeler.pro
+	$ make
+	$ make install
+	$ cd $INSTALLATION_ROOT
+	$ windeployqt pgmodeler.exe pgmodeler_ui.dll
+	```
 
-	* qmake - (make do qt) é uma ferramenta de "build system", ou seja, auxilia na automatização de scripts 
-para compilar o código fonte. Normalmente é usado em projetos que utilizam o framework Qt, porém pode 
-ser usado em qualquer código C e C++;  contém várias funcionalidades que automatizam o processo de 
-geração de diretivas (Makefiles). Primeiro passo o qmake gera um arquivo de projeto (.pro) inicial. 
+	* qmake - (make do qt) é uma ferramenta de "build system", ou seja, auxilia na automatização de scripts para compilar o código fonte. Normalmente é usado em projetos que utilizam o framework Qt, porém pode ser usado em qualquer código C e C++;  contém várias funcionalidades que automatizam o processo de geração de diretivas (Makefiles). Primeiro passo o qmake gera um arquivo de projeto (.pro) inicial. 
 
 	* make - utilitário GNU make para montar grupos de programas - gera o arquivo compilado.
 	
 	Ao iniciar o comando make sem a especificação de um arquivo (opção -f), o utilitário 
 faz a seguinte sequência de busca no diretório atual:
-
-	    1 - GNUmakefile
-	    2 - makefile
-	    3 - Makefile
-
-
+	```console
+	1 - GNUmakefile
+	2 - makefile
+	3 - Makefile
+	```
+	
 	Apenas o primeiro arquivo encontrado é executado pelo utilitário.
 
 	* make install - instala o  programa já compilado.
