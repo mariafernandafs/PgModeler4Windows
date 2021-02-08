@@ -20,7 +20,7 @@ pode ser usada, certifique-se de que não seja uma versão abaixo da 5.9.9 (A ve
 4) Por último, será necessário um compilador para C++/Qt. 
 Recomando o software msys2 MingGW, é uma plataforma que facilita a instalação de packages necessários e 
 suas dependências incluindo o Qt framework e PostgreSQL (pode ser utilizada a versão mais recente).
-* https://www.msys2.org/ 
+- (https://www.msys2.org/)
 	
 	* Primeiro, instale o MSYS2 (64-bit ou 32-bit conforme versão da arquitetura do computador), e clique no programa no menu iniciar.
 
