@@ -2,7 +2,7 @@
 Procedimento de Compilação e Instalação do software de modelagem PgModeler em ambiente Windows.
 
 * * * *
-* * * * Compilando o PgModeler * * * *
+## Compilando o PgModeler 
 
 PgModeler é um Software para modelagem de dados que utiliza o Banco de Dados PostgreSQL (RDBMS). É muito útil para importar e exportar dados em diversos formatos e para ter um desgin do schema utilizado com uma visão ampla dos relacionamentos. 
 
