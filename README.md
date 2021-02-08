@@ -1,7 +1,8 @@
 # PgModeler4Windows
 Procedimento de Compilação e Instalação do software de modelagem PgModeler em ambiente Windows.
 
-##################### Compilando o PgModeler #####################
+* * * *
+* * * * Compilando o PgModeler * * * *
 
 PgModeler é um Software para modelagem de dados que utiliza o Banco de Dados PostgreSQL (RDBMS). É muito útil para importar e exportar dados em diversos formatos e para ter um desgin do schema utilizado com uma visão ampla dos relacionamentos. 
 
@@ -56,6 +57,7 @@ Passe esta opção duas vezes para habilitar downgrades de pacote; neste caso, o
     
 Atualize os valores conforme a localização dos arquivos nos diretórios em seu sistema. Salve o arquivo (pgmodeler.pri.) e proceda com o próximo passo. 
  
+* * * * 
 PARTE 2 - COMPILANDO O SOFTWARE
 
 Todos os comandos abaixo devem ser executados no console do programa MSYS2 MinGW com privilégios root 
@@ -97,6 +99,8 @@ Apenas o primeiro arquivo encontrado é executado pelo utilitário.
 foi projetada para automatizar o processo de criação de uma pasta implantável contendo as dependências 
 relacionadas ao Qt (bibliotecas, importações QML, plug-ins e traduções) necessárias para executar o aplicativo a partir dessa pasta. 
 
+* * * *
+
 PARTE 3 - RESOLVENDO DEPENDÊNCIAS
 Depois do sucesso da compilação do código fonte e instalação dos binários, é necessário copiar
 algumas dependências para a pasta de instalação do PgModeler e rodar alguns comandos para
@@ -121,6 +125,8 @@ completo para a instalação do MSYS2)
 		  libstdc++-6.dll libwinpthread-1.dll zlib1.dll libpq.dll libxml2-2.dll liblzma-5.dll \
 		  libiconv-2.dll libintl-8.dll libbrotlidec.dll libbrotlicommon.dll libdouble-conversation.dll \
 		  libzstd.dll $INSTALLATION_ROOT	
+
+* * * *
 
 PARTE 4 - EXECUTANDO O PGMODELER
 Finalmente o PgModeler pode ser iniciado.
