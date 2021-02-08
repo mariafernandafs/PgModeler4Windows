@@ -20,9 +20,9 @@ pode ser usada, certifique-se de que não seja uma versão abaixo da 5.9.9 (A ve
 4) Por último, será necessário um compilador para C++/Qt. 
 Recomando o software msys2 MingGW, é uma plataforma que facilita a instalação de packages necessários e 
 suas dependências incluindo o Qt framework e PostgreSQL (pode ser utilizada a versão mais recente).
-	* https://www.msys2.org/ 
+* https://www.msys2.org/ 
 	
-	* Primeiro, instale o MSYS2 (64-bit ou 32-bit conforme versão da arquitetura do computador), e clique no programa no menu iniciar.
+* Primeiro, instale o MSYS2 (64-bit ou 32-bit conforme versão da arquitetura do computador), e clique no programa no menu iniciar.
 
 	No console do programa MSYS2 MinGW, digite os comandos abaixo na ordem correta:
 
@@ -32,19 +32,19 @@ suas dependências incluindo o Qt framework e PostgreSQL (pode ser utilizada a v
   	$ pacman -S base-devel mingw-w64-x86_64-make mingw-w64-x86_64-gcc mingw-w64-x86_64-postgresql mingw-w64-x86_64-qt5
 ```
 
-	O pacman é um gerenciador de pacotes cria inicalmente para o Arch Linux e tem como objetivo tornar possível o fácil gerenciamento de pacotes tanto dos repositórios oficiais quanto do Arch User Repository (AUR) repositório comunitário e não oficial. Possui uma importante capacidade de `sincronização` da máquina local com a máquina remoto. 
+O pacman é um gerenciador de pacotes cria inicalmente para o Arch Linux e tem como objetivo tornar possível o fácil gerenciamento de pacotes tanto dos repositórios oficiais quanto do Arch User Repository (AUR) repositório comunitário e não oficial. Possui uma importante capacidade de `sincronização` da máquina local com a máquina remoto. 
 	Obs.: Os pacotes do Pacman são em formato tar compactado.
 
-	Entendendo os Parâmentros do comando `pacman` do item 4:
-	```console
-		-Suy -> combinação dos parâmentros -S, -u e -y
-		-S ou --sync -> Sincroniza pacotes. Os pacotes são instalados diretamente dos repositórios remotos, incluindo todas as dependências necessárias para executar os pacotes.No exemplo abaixo, irá baixar e instalar o qt e todos os pacotes dos quais ele depende:
-			$ pacman -S qt 
-		-u ou --sysupgrade -> Atualiza todos os pacotes desatualizados.
-		-y ou --refresh -> Baixe uma nova cópia do banco de dados do pacote mestre do (s) servidor (es) definido (s) em pacman.conf (todo gerenciador de pacotes possui um banco de dados que contém suas fontes de busca).
-	```
+Entendendo os Parâmentros do comando `pacman` do item 4:
+```console
+	-Suy -> combinação dos parâmentros -S, -u e -y
+	-S ou --sync -> Sincroniza pacotes. Os pacotes são instalados diretamente dos repositórios remotos, incluindo todas as dependências necessárias para executar os pacotes.No exemplo abaixo, irá baixar e instalar o qt e todos os pacotes dos quais ele depende:
+		$ pacman -S qt 
+	-u ou --sysupgrade -> Atualiza todos os pacotes desatualizados.
+	-y ou --refresh -> Baixe uma nova cópia do banco de dados do pacote mestre do (s) servidor (es) definido (s) em pacman.conf (todo gerenciador de pacotes possui um banco de dados que contém suas fontes de busca).
+```
 
-	Passe esta opção duas vezes para habilitar downgrades de pacote; neste caso, o pacman selecionará os pacotes de sincronização cujas versões não correspondem às versões locais. Isso pode ser útil quando o usuário muda de um repositório de teste para um estável.
+Passe esta opção duas vezes para habilitar downgrades de pacote; neste caso, o pacman selecionará os pacotes de sincronização cujas versões não correspondem às versões locais. Isso pode ser útil quando o usuário muda de um repositório de teste para um estável.
 
 5) É necessário corrigir o valor das variáveis de ambiente "PGSQL_LIB, PGSQL_INC, XML_INC and XML_LIB" para que o compilador possa encontrar o cabeçalho e bibliotecas para libxml2 e libpq. Abra o arquivo "pgmodeler.pri" que se encontra junto com o código fonte em um editor e procure o seguinte trecho:  
 
