@@ -32,8 +32,8 @@ suas dependências incluindo o Qt framework e PostgreSQL (pode ser utilizada a v
   	$ pacman -S base-devel mingw-w64-x86_64-make mingw-w64-x86_64-gcc mingw-w64-x86_64-postgresql mingw-w64-x86_64-qt5
 ```
 
-	O `pacman` é um gerenciador de pacotes cria inicalmente para o Arch Linux e tem como objetivo tornar possível o fácil gerenciamento de pacotes tanto dos repositórios oficiais quanto do Arch User Repository (AUR) repositório comunitário e não oficial. Possui uma importante capacidade de `sincronização` da máquina local com a máquina remoto. 
-Obs.: Os pacotes do Pacman são em formato tar compactado.
+	O pacman é um gerenciador de pacotes cria inicalmente para o Arch Linux e tem como objetivo tornar possível o fácil gerenciamento de pacotes tanto dos repositórios oficiais quanto do Arch User Repository (AUR) repositório comunitário e não oficial. Possui uma importante capacidade de `sincronização` da máquina local com a máquina remoto. 
+	Obs.: Os pacotes do Pacman são em formato tar compactado.
 
 	Entendendo os Parâmentros do comando `pacman` do item 4:
 	```console
