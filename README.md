@@ -62,7 +62,7 @@ Atualize os valores conforme a localização dos arquivos nos diretórios em seu
 finalize a configuração do ambiente salvando no "PATH" o caminho do diretório abaixo:
 
 ```console
-	export PATH=$PATH:"/C/Qt/6.0.1/mingw81_64/bin"
+$ export PATH=$PATH:"/C/Qt/6.0.1/mingw81_64/bin"
 ```
  
 * * * * 
