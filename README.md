@@ -12,7 +12,7 @@ PgModeler é um Software para modelagem de dados que utiliza o Banco de Dados Po
 A modalidade recomentada é a The LTS (Long Term Support) mas qualquer versão estável 
 pode ser usada, certifique-se de que não seja uma versão abaixo da 5.9.9 (A versão utilizada neste guia foi 5.15).
 	* https://www.qt.io/download
-	
++	
 2) Depois, será necessário a instalação do PostgreSQL (A versão utilizada neste guia foi a 13).
 	* https://www.postgresql.org/download/windows/
 	
@@ -64,7 +64,6 @@ Atualize os valores conforme a localização dos arquivos nos diretórios em seu
  
 * * * * 
 
-+
 2. COMPILANDO O SOFTWARE
 
 Todos os comandos abaixo devem ser executados no console do programa MSYS2 MinGW com privilégios root 
