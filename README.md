@@ -127,6 +127,7 @@ completo para a instalação do MSYS2)
 10) Por fim, rode os comandos abaixo para copiar as bibliotecas do mingw para a pasta onde ficará o PgModeler:
 ```console
 	$ cd $MSYS2_ROOT/mingw64/bin/
+	$ export INSTALLATION_ROOT=/C/PgModeler
 	$ cp libicuin*.dll libicuuc*.dll libicudt*.dll libpcre2-16-0.dll libharfbuzz-0.dll \
 		  libpng16-16.dll libfreetype-6.dll libgraphite2.dll libglib-2.0-0.dll libpcre-1.dll \
 		  libbz2-1.dll libssl-1_1-x64.dll libcrypto-1_1-x64.dll libgcc_s_seh-1.dll \
@@ -137,9 +138,9 @@ completo para a instalação do MSYS2)
 
 * * * *
 
-PARTE 4 - EXECUTANDO O PGMODELER
+## 4. EXECUTANDO O PGMODELER
 Finalmente o PgModeler pode ser iniciado.
-Abra a pasta de instalação e dê um dublo clique na aplicação "pgmodeler.exe" e divirta-se.
+Abra a pasta de instalação `C:\PgModeler` e dê um dublo clique na aplicação "pgmodeler.exe" e divirta-se.
 
 Enjoy!
 
