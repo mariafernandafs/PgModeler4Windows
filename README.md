@@ -26,11 +26,13 @@ suas dependências incluindo o Qt framework e PostgreSQL (pode ser utilizada a v
 * Primeiro, instale o MSYS2 (64-bit ou 32-bit conforme versão da arquitetura do computador), e clique no programa no menu iniciar.
 
 No console do programa MSYS2 MinGW, digite os comandos abaixo na ordem correta:
-```bash
+
+```shell
 	1: pacman -Suy
  	2: pacman -Suy
   	3: pacman -S base-devel mingw-w64-x86_64-make mingw-w64-x86_64-gcc mingw-w64-x86_64-postgresql mingw-w64-x86_64-qt5
 ```
+
 * O "pacman" é um gerenciador de pacotes cria inicalmente para o Arch Linux e tem como objetivo tornar possível o fácil gerenciamento de pacotes tanto dos repositórios oficiais quanto do Arch User Repository (AUR) repositório comunitário e não oficial. Possui uma importante capacidade de `sincronização` da máquina local com a máquina remoto. 
 Obs.: Os pacotes do Pacman são em formato tar compactado.
 
@@ -66,19 +68,21 @@ e a partir do diretório onde o código fonte do PgModeler se encontra (descompa
 7) exportar as variáveis "QT_ROOT" e "INSTALLATION_ROOT" com os caminhos completos da instalação do Qt 
 e do diretório onde o PgModeler deverá ser instalado (recomanda-se a criação um diretório em branco com 
 o nome PgModeler) respectivamente
-#
+```shell
 	mkdir -p /C/PgModeler
 	export QT_ROOT=/C/Qt
 	export INSTALLATION_ROOT=/C/PgModeler
-		
+```
+
 8) Na sequência, rode os seguintes comandos:
-#
+```shell
 	1: qmake -r CONFIG+=release PREFIX=$INSTALLATION_ROOT pgmodeler.pro
 	2: make
 	3: make install
 	4: cd $INSTALLATION_ROOT
  	5: windeployqt pgmodeler.exe pgmodeler_ui.dll
-	
+```
+
 * qmake - (make do qt) é uma ferramenta de "build system", ou seja, auxilia na automatização de scripts 
 para compilar o código fonte. Normalmente é usado em projetos que utilizam o framework Qt, porém pode 
 ser usado em qualquer código C e C++;  contém várias funcionalidades que automatizam o processo de 
@@ -110,14 +114,14 @@ fazer com que os binários sejam localizados corretamente.
 para os caminhos atualizados (PGSQL_ROOT - caminho completo para a pasta de instalação do PostgreSQL,
 PGMODELER_SOURCE - caminho completo para o diretório de código-fonte do pgModeler e MSYS2_ROOT - caminho 
 completo para a instalação do MSYS2)
-#
+```shell
 	export PGSQL_ROOT=/C/"Program Files"/PostgreSQL/13/bin
 	export PGMODELER_SOURCE=/C/Users/User/Downloads/pgmodeler-0.9.3/pgmodeler-0.9.3.tar/pgmodeler-0.9.3
 	export MSYS2_ROOT=/C/Qt/6.0.1
-		
+```		
 
 10) Por fim, rode os comandos abaixo para copiar as bibliotecas do mingw para a pasta onde ficará o PgModeler:
-# 
+```shell
 	cd $MSYS2_ROOT/mingw64/bin/
 	cp libicuin*.dll libicuuc*.dll libicudt*.dll libpcre2-16-0.dll libharfbuzz-0.dll \
 		  libpng16-16.dll libfreetype-6.dll libgraphite2.dll libglib-2.0-0.dll libpcre-1.dll \
@@ -125,6 +129,7 @@ completo para a instalação do MSYS2)
 		  libstdc++-6.dll libwinpthread-1.dll zlib1.dll libpq.dll libxml2-2.dll liblzma-5.dll \
 		  libiconv-2.dll libintl-8.dll libbrotlidec.dll libbrotlicommon.dll libdouble-conversation.dll \
 		  libzstd.dll $INSTALLATION_ROOT	
+```
 
 * * * *
 
