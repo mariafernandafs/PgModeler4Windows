@@ -37,18 +37,19 @@ No console do programa MSYS2 MinGW, digite os comandos abaixo na ordem correta:
 Obs.: Os pacotes do Pacman são em formato tar compactado.
 
 Entendendo os Parâmentros do comando do item 4:
-#
+```shell
 	-Suy -> combinação dos parâmentros -S, -u e -y
 	-S ou --sync -> Sincroniza pacotes. Os pacotes são instalados diretamente dos repositórios remotos, incluindo todas as dependências necessárias para executar os pacotes.No exemplo abaixo, irá baixar e instalar o qt e todos os pacotes dos quais ele depende:
 		$ pacman -S qt 
 	-u ou --sysupgrade -> Atualiza todos os pacotes desatualizados.
 	-y ou --refresh -> Baixe uma nova cópia do banco de dados do pacote mestre do (s) servidor (es) definido (s) em pacman.conf (todo gerenciador de pacotes possui um banco de dados que contém suas fontes de busca).
+```
 
 Passe esta opção duas vezes para habilitar downgrades de pacote; neste caso, o pacman selecionará os pacotes de sincronização cujas versões não correspondem às versões locais. Isso pode ser útil quando o usuário muda de um repositório de teste para um estável.
 
 5) É necessário corrigir o valor das variáveis de ambiente "PGSQL_LIB, PGSQL_INC, XML_INC and XML_LIB" para que o compilador possa encontrar o cabeçalho e bibliotecas para libxml2 e libpq. Abra o arquivo "pgmodeler.pri" que se encontra junto com o código fonte em um editor e procure o seguinte trecho:  
 
-#
+```shell
 	windows {
 		!defined(PGSQL_LIB, var): PGSQL_LIB = C:/msys64/mingw64/bin/libpq.dll
 		!defined(PGSQL_INC, var): PGSQL_INC = C:/msys64/mingw64/include
@@ -56,7 +57,8 @@ Passe esta opção duas vezes para habilitar downgrades de pacote; neste caso, o
 		!defined(XML_LIB, var): XML_LIB = C:/msys64/mingw64/bin/libxml2-2.dll
 		...
 	}
-    
+```
+
 Atualize os valores conforme a localização dos arquivos nos diretórios em seu sistema. Salve o arquivo (pgmodeler.pri.) e proceda com o próximo passo. 
  
 * * * * 
