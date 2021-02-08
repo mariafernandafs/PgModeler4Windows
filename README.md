@@ -138,8 +138,8 @@ completo para a instalação do MSYS2)
 * * * *
 
 ## 4. EXECUTANDO O PGMODELER
-	Finalmente o PgModeler pode ser iniciado.
-	Abra a pasta de instalação `C:\PgModeler` e dê um dublo clique na aplicação "pgmodeler.exe" e divirta-se.
+* Finalmente o PgModeler pode ser iniciado.
+* Abra a pasta de instalação `C:\PgModeler` e dê um dublo clique na aplicação "pgmodeler.exe" e divirta-se.
 
 Enjoy!
 
