@@ -7,12 +7,10 @@ Procedimento de Compilação e Instalação do software de modelagem PgModeler e
 PgModeler é um Software para modelagem de dados que utiliza o Banco de Dados PostgreSQL (RDBMS). É muito útil para importar e exportar dados em diversos formatos e para ter um desgin do schema utilizado com uma visão ampla dos relacionamentos. 
 
 1. PREPARANDO AMBIENTE
-+
 1) Em todas as plataformas, o primeiro requisito será o Qt framework. 
 A modalidade recomentada é a The LTS (Long Term Support) mas qualquer versão estável 
 pode ser usada, certifique-se de que não seja uma versão abaixo da 5.9.9 (A versão utilizada neste guia foi 5.15).
-	* https://www.qt.io/download
-+	
+	* https://www.qt.io/download	
 2) Depois, será necessário a instalação do PostgreSQL (A versão utilizada neste guia foi a 13).
 	* https://www.postgresql.org/download/windows/
 	
