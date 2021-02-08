@@ -58,7 +58,12 @@ windows {
 }
 ```
 
-Atualize os valores conforme a localização dos arquivos nos diretórios em seu sistema. Salve o arquivo (pgmodeler.pri.) e proceda com o próximo passo. 
+Atualize os valores conforme a localização dos arquivos nos diretórios em seu sistema. Salve o arquivo (pgmodeler.pri.) e 
+finalize a configuração do ambiente salvando no "PATH" o caminho do diretório abaixo:
+
+```console
+	export PATH=$PATH:"/C/Qt/6.0.1/mingw81_64/bin"
+```
  
 * * * * 
 
@@ -124,7 +129,7 @@ $ export MSYS2_ROOT=/C/Qt/6.0.1
 
 10) Por fim, rode os comandos abaixo para copiar as bibliotecas do mingw para a pasta onde ficará o PgModeler:
 ```console
-$ cd $MSYS2_ROOT/mingw64/bin/
+$ cd $MSYS2_ROOT/mingw81_64/bin/
 $ export INSTALLATION_ROOT=/C/PgModeler
 $ cp libicuin*.dll libicuuc*.dll libicudt*.dll libpcre2-16-0.dll libharfbuzz-0.dll \
 	  libpng16-16.dll libfreetype-6.dll libgraphite2.dll libglib-2.0-0.dll libpcre-1.dll \
