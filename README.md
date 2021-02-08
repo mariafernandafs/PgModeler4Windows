@@ -8,28 +8,28 @@ PgModeler é um Software para modelagem de dados que utiliza o Banco de Dados Po
 PARTE 1 - PREPARANDO AMBIENTE
 1) Em todas as plataformas, o primeiro requisito será o Qt framework. 
 A modalidade recomentada é a The LTS (Long Term Support) mas qualquer versão estável 
-pode ser usada, certifique-se de que não seja uma versão abaixo da 5.9.9.
+pode ser usada, certifique-se de que não seja uma versão abaixo da 5.9.9 (A versão utilizada neste guia foi x).
 	* https://www.qt.io/download
 	
-2) Depois, será necessário a instalação do PostgreSQL.
+2) Depois, será necessário a instalação do PostgreSQL (A versão utilizada neste guia foi a 13).
 	* https://www.postgresql.org/download/windows/
 	
-3) Finalmente, será necessário o download recente da cópia do código fonte do PgModeler.
+3) Finalmente, será necessário o download recente da cópia do código fonte do PgModeler (a versão utilizada neste guia foi a 0.9.3).
 	*  https://pgmodeler.io/download?source=true
 	
 4) Por último, será necessário um compilador para C++/Qt. 
 Recomando o software msys2 MingGW, é uma plataforma que facilita a instalação de packages necessários e 
-suas dependências incluindo o Qt framework e PostgreSQL
+suas dependências incluindo o Qt framework e PostgreSQL (pode ser utilizada a versão mais recente).
 	* https://www.msys2.org/ 
 	
 * Primeiro, instale o MSYS2 (64-bit ou 32-bit conforme versão da arquitetura do computador), e clique no programa no menu iniciar.
 
 No console do programa MSYS2 MinGW, digite os comandos abaixo na ordem correta:
-#
+```shell
 	1: pacman -Suy
  	2: pacman -Suy
   	3: pacman -S base-devel mingw-w64-x86_64-make mingw-w64-x86_64-gcc mingw-w64-x86_64-postgresql mingw-w64-x86_64-qt5
-
+```
 * O "pacman" é um gerenciador de pacotes cria inicalmente para o Arch Linux e tem como objetivo tornar possível o fácil gerenciamento de pacotes tanto dos repositórios oficiais quanto do Arch User Repository (AUR) repositório comunitário e não oficial. Possui uma importante capacidade de SINCRONIZAÇÃO da máquina local com a máquina remoto. 
 Obs.: Os pacotes do Pacman são em formato tar compactado.
 
@@ -91,7 +91,7 @@ faz a seguinte sequência de busca no diretório atual:
 	    3 - Makefile
 Apenas o primeiro arquivo encontrado é executado pelo utilitário.
 
-* make install - instala o  programo já compilado.
+* make install - instala o  programa já compilado.
 
 * windeployqt (Windows deployment tool) - A ferramenta de implantação do Windows windeployqt 
 foi projetada para automatizar o processo de criação de uma pasta implantável contendo as dependências 
